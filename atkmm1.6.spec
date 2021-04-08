@@ -1,9 +1,11 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
+%define pkgname atkmm
+
 
 %define api	1.6
 %define major	1
-%define libname	%mklibname %{name} %{api} %{major}
-%define devname	%mklibname -d %{name} %{api}
+%define libname	%mklibname %{pkgname} %{api} %{major}
+%define devname	%mklibname -d %{pkgname} %{api}
 %define _disable_rebuild_configure 1
 
 Summary:	C++ interface for accessibility library Atk
@@ -14,7 +16,7 @@ Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		http://gtkmm.sourceforge.net/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/atkmm/%{url_ver}/atkmm-%{version}.tar.xz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/atkmm/%{url_ver}/%{pkgname}-%{version}.tar.xz
 
 BuildRequires:	meson
 BuildRequires:	mm-common
@@ -31,7 +33,7 @@ quickly create complex user interfaces.
 %package	-n %{libname}
 Summary:	C++ interface for accessibility library Atk
 Group:		System/Libraries
-Provides:	%{name}%{api} = %{EVRD}
+Provides:	%{pkgname}%{api} = %{EVRD}
 
 %description	-n %{libname}
 Atkmm provides a C++ interface to the Atk accessibility library.
@@ -46,7 +48,7 @@ linked with %{name}.
 Summary:	Headers and development files of %{name}
 Group:		Development/GNOME and GTK+
 Requires:	%{libname} = %{EVRD}
-Provides:	%{name}%{api}-devel = %{EVRD}
+Provides:	%{pkgname}%{api}-devel = %{EVRD}
 Obsoletes:	%{name}-docs
 
 %description	-n %{devname}
@@ -54,7 +56,7 @@ This package contains the headers and development files that are needed,
 when trying to develop or compile applications which need %{name}.
 
 %prep
-%setup -q -n atkmm-%{version}
+%setup -q -n %{pkgname}-%{version}
 
 %build
 %meson
