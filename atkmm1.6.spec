@@ -14,7 +14,7 @@ Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		http://gtkmm.sourceforge.net/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/atkmm/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/atkmm/%{url_ver}/atkmm-%{version}.tar.xz
 
 BuildRequires:	meson
 BuildRequires:	mm-common
@@ -54,7 +54,7 @@ This package contains the headers and development files that are needed,
 when trying to develop or compile applications which need %{name}.
 
 %prep
-%setup -q
+%setup -q -n atkmm-%{version}
 
 %build
 %meson
