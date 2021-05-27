@@ -10,7 +10,7 @@
 
 Summary:	C++ interface for accessibility library Atk
 Name:		atkmm%{api}
-Version:	2.28.1
+Version:	2.28.2
 Release:	1
 #gw lib is LGPL, tool is GPL
 License:	LGPLv2+ and GPLv2+
