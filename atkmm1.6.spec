@@ -10,8 +10,8 @@
 
 Summary:	C++ interface for accessibility library Atk
 Name:		atkmm%{api}
-Version:	2.28.2
-Release:	3
+Version:	2.28.3
+Release:	1
 #gw lib is LGPL, tool is GPL
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
@@ -69,7 +69,7 @@ when trying to develop or compile applications which need %{name}.
 %{_libdir}/libatkmm-%{api}.so.%{major}*
 
 %files -n %{devname}
-%doc ChangeLog AUTHORS COPYING NEWS README
+%doc ChangeLog AUTHORS COPYING NEWS README*
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
