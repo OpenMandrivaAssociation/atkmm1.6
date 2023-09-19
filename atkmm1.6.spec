@@ -11,12 +11,12 @@
 Summary:	C++ interface for accessibility library Atk
 Name:		atkmm%{api}
 Version:	2.28.3
-Release:	3
+Release:	4
 #gw lib is LGPL, tool is GPL
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
-Url:		http://gtkmm.sourceforge.net/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/atkmm/%{url_ver}/%{pkgname}-%{version}.tar.xz
+Url:		https://gtkmm.sourceforge.net/
+Source0:	https://ftp.gnome.org/pub/GNOME/sources/atkmm/%{url_ver}/%{pkgname}-%{version}.tar.xz
 
 BuildRequires:	meson
 BuildRequires:	mm-common
