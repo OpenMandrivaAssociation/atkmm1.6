@@ -10,8 +10,8 @@
 
 Summary:	C++ interface for accessibility library Atk
 Name:		atkmm%{api}
-Version:	2.28.4
-Release:	5
+Version:	2.28.5
+Release:	1
 #gw lib is LGPL, tool is GPL
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
@@ -56,7 +56,7 @@ This package contains the headers and development files that are needed,
 when trying to develop or compile applications which need %{name}.
 
 %prep
-%setup -q -n %{pkgname}-%{version}
+%autosetup -n %{pkgname}-%{version} -p1
 
 %build
 %meson
@@ -74,6 +74,3 @@ when trying to develop or compile applications which need %{name}.
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/atkmm-%{api}/
-#doc #{_datadir}/doc/atkmm-%{api}/
-#doc #{_datadir}/devhelp/books/*
-
